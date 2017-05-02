@@ -39,6 +39,7 @@ mss_js_pooled <- df %>%
     epsilon2_hat = sum((n - 1) * raw_epsilon2_i_hat) / sum(n - 1),
     sigma2_hat = epsilon2_hat / n,
     B_hat = sigma2_hat / btw_group_std2,
+    B_hat = pmin(pmax(B_hat, 0), 1),
     x_i_hat = (1 - B_hat) * x_i + B_hat * X_bar)
          
 # Mixed Model
