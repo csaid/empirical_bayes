@@ -27,7 +27,7 @@ mss_js <- df %>%
     x_i_hat = (1 - B_hat) * x_i + B_hat * X_bar)
 
 # Multi Sample Size Pooled James-Stein Estimator
-mss_js_pooled <- df %>%
+mss_pooled_js <- df %>%
   group_by(Species) %>%
   summarise(
     x_i = mean(Sepal.Width),

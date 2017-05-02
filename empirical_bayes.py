@@ -69,5 +69,5 @@ df = pd.concat([
 stats_mss_js = multi_sample_size_js_estimator(df, group_id_col='species', data_col='sepal_width', pooled=False)
 
 # Multi Sample Size Pooled James-Stein Estimator
-stats_mss_js_pooled = multi_sample_size_js_estimator(df, group_id_col='species', data_col='sepal_width', pooled=True)
+stats_mss_pooled_js = multi_sample_size_js_estimator(df, group_id_col='species', data_col='sepal_width', pooled=True)
 
